@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #0e0a0c;
+  --ink-soft: #1a1216;
+  --rose: #f4a6b0;
+  --rose-deep: #ff7a8a;
+  --blush: #ffd6dc;
+  --cream: #f8ede8;
+  --gold: #e8c39e;
+  --sage: #a8c5b8;
+  --muted: #c9b8b4;
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-rose: var(--rose);
+  --color-rose-deep: var(--rose-deep);
+  --color-blush: var(--blush);
+  --color-cream: var(--cream);
+  --color-gold: var(--gold);
+  --color-sage: var(--sage);
+  --color-muted: var(--muted);
+  --font-sans: var(--font-plus-jakarta);
+  --font-serif: var(--font-playfair);
+}
+
+html,
+body {
+  min-height: 100%;
+  background: var(--ink);
+  color: var(--cream);
+}
+
+body {
+  font-family: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(244, 166, 176, 0.18), transparent 55%),
+    radial-gradient(900px 500px at -10% 110%, rgba(232, 195, 158, 0.12), transparent 50%),
+    var(--ink);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(244, 166, 176, 0.35) transparent;
+}
+
+::selection {
+  background: rgba(244, 166, 176, 0.35);
+}
+
+.glass {
+  background: rgba(26, 18, 22, 0.72);
+  border: 1px solid rgba(248, 237, 232, 0.08);
+  backdrop-filter: blur(22px);
+}
+
+.phone-frame {
+  aspect-ratio: 9 / 16;
+}
